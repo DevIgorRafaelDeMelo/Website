@@ -19,6 +19,7 @@ import {
   SiJavascript,
   SiTailwindcss,
   SiStyledcomponents,
+  SiAngular,
 } from "react-icons/si";
 import ImgFundo from "../img/pexels-white-noiise-8992445.jpg";
 import MinhaImg from "../img/pexels-mizuno-k-12899158.jpg";
@@ -181,7 +182,34 @@ function Home() {
             <FrontEnd>
               <TextSkill>Back-End</TextSkill>
               <LineHorizontal></LineHorizontal>
+
               <SectionProjetos>
+                <CardProjeto>
+                  <a
+                    style={{ textDecoration: "none" }}
+                    href="https://github.com/DevIgorRafaelDeMelo/AngularCRUD"
+                    target="_Blanck"
+                  >
+                    <CardBackUm>
+                      <CardDate>10/Agosto</CardDate>
+                      <CardTitle>Angular CRUD</CardTitle>
+                      <div>
+                        <SiAngular
+                          style={{
+                            height: "90px",
+                            width: "90px",
+                            paddingTop: "25px",
+                            paddingBottom: "25px",
+                            color: "#C00020",
+                          }}
+                        />
+                      </div>
+                      <CardFerramentas>
+                        TypeScript/Router/HttpClient/json-server
+                      </CardFerramentas>
+                    </CardBackUm>
+                  </a>
+                </CardProjeto>
                 <CardProjeto>
                   <a
                     style={{ textDecoration: "none" }}
@@ -190,17 +218,23 @@ function Home() {
                   >
                     <CardBackUm>
                       <CardDate>03/Março</CardDate>
-                      <CardTitle>Bilingue</CardTitle>
+                      <CardTitle>Bilíngue</CardTitle>
+                      <div>
+                        <SiJavascript
+                          style={{
+                            height: "90px",
+                            width: "90px",
+                            paddingTop: "25px",
+                            paddingBottom: "25px",
+                            color: "#FBFF04",
+                          }}
+                        />
+                      </div>
                       <CardFerramentas>
-                        React/Js/Express/Axios/Api/Mysql
+                        JavaScript/Express/Axios/Api/Mysql
                       </CardFerramentas>
                     </CardBackUm>
                   </a>
-                </CardProjeto>
-                <CardProjeto>
-                  <CardDate></CardDate>
-                  <CardTitle></CardTitle>
-                  <CardFerramentas></CardFerramentas>
                 </CardProjeto>
                 <CardProjeto>
                   <CardDate></CardDate>
