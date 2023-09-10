@@ -19,10 +19,11 @@ import {
   SiJavascript,
   SiTailwindcss,
   SiStyledcomponents,
-  SiAngular,
+  SiMysql,
+  SiPython,
 } from "react-icons/si";
 import ImgFundo from "../img/pexels-white-noiise-8992445.jpg";
-import MinhaImg from "../img/pexels-mizuno-k-12899158.jpg";
+import MinhaImg from "../img/fund.webp";
 import ImgBackum from "../img/Bilingue.jpg";
 import ImgFrontUm from "../img/pexels-matheus-oliveira-10949676.jpg";
 import ImgFrontDdois from "../img/bank.webp";
@@ -46,7 +47,7 @@ function Home() {
             <TitleHome>
               <Text1>Olá, Eu sou </Text1>
               <Text2>Igor Rafael de Melo</Text2>
-              <Text3>Web Desenvolvedor / ReactJs </Text3>
+              <Text3>Web Desenvolvedor / ReactJs / Python</Text3>
             </TitleHome>
             <IconMenu>
               <a href="https://github.com/DevIgorRafaelDeMelo" target="_Blanck">
@@ -75,11 +76,11 @@ function Home() {
               <TextTitleUm>Um pouco sobre mim</TextTitleUm>
               <TextTitleDois>
                 Olá me chamo Igor Rafael de Melo, e sou estudante de
-                programação, mais especificamente em desenvolvimento Web, possuo
+                programação, mais especificamente em desenvolvimento Web, possou
                 diversos curso e formação técnica em análise de sistemas
-                Web/Mobile, estou a procura de um emprego na área de Ti com
-                sistemas, nesse portfólio a sistemas back e front-end que
-                desenvolvi durante meu aprendizado. 
+                Web/Mobile, estou a procura de uma oportunidade na área de Ti,
+                nesse portfólio a sistemas Back e Front-End que desenvolvi
+                durante meu aprendizado.
               </TextTitleDois>
             </BoxDois>
           </Sobre>
@@ -187,26 +188,48 @@ function Home() {
                 <CardProjeto>
                   <a
                     style={{ textDecoration: "none" }}
-                    href="https://github.com/DevIgorRafaelDeMelo/AngularCRUD"
+                    href="https://github.com/DevIgorRafaelDeMelo/PythonCursoAvancado"
                     target="_Blanck"
                   >
                     <CardBackUm>
-                      <CardDate>10/Agosto</CardDate>
-                      <CardTitle>Angular CRUD</CardTitle>
+                      <CardDate>09/Agosto</CardDate>
+                      <CardTitle>Jogo da forca</CardTitle>
                       <div>
-                        <SiAngular
+                        <SiPython
                           style={{
                             height: "90px",
                             width: "90px",
                             paddingTop: "25px",
                             paddingBottom: "25px",
-                            color: "#C00020",
+                            color: "#0762D0",
                           }}
                         />
                       </div>
-                      <CardFerramentas>
-                        TypeScript/Router/HttpClient/json-server
-                      </CardFerramentas>
+                      <CardFerramentas>Python</CardFerramentas>
+                    </CardBackUm>
+                  </a>
+                </CardProjeto>
+                <CardProjeto>
+                  <a
+                    style={{ textDecoration: "none" }}
+                    href="https://github.com/DevIgorRafaelDeMelo/OObjValidador"
+                    target="_Blanck"
+                  >
+                    <CardBackUm>
+                      <CardDate>09/Setenbro</CardDate>
+                      <CardTitle>Validador Login OObj</CardTitle>
+                      <div>
+                        <SiPython
+                          style={{
+                            height: "90px",
+                            width: "90px",
+                            paddingTop: "25px",
+                            paddingBottom: "25px",
+                            color: "#0762D0",
+                          }}
+                        />
+                      </div>
+                      <CardFerramentas>Python</CardFerramentas>
                     </CardBackUm>
                   </a>
                 </CardProjeto>
@@ -236,11 +259,7 @@ function Home() {
                     </CardBackUm>
                   </a>
                 </CardProjeto>
-                <CardProjeto>
-                  <CardDate></CardDate>
-                  <CardTitle></CardTitle>
-                  <CardFerramentas></CardFerramentas>
-                </CardProjeto>
+
                 <CardProjeto>
                   <CardDate></CardDate>
                   <CardTitle></CardTitle>
@@ -338,6 +357,26 @@ function Home() {
             <Skills>
               <CardSkill>
                 <SiStyledcomponents
+                  style={{
+                    height: "50px",
+                    width: "50px",
+                    paddingTop: "25px",
+                    paddingBottom: "25px",
+                  }}
+                />
+              </CardSkill>
+              <CardSkill>
+                <SiPython
+                  style={{
+                    height: "50px",
+                    width: "50px",
+                    paddingTop: "25px",
+                    paddingBottom: "25px",
+                  }}
+                />
+              </CardSkill>
+              <CardSkill>
+                <SiMysql
                   style={{
                     height: "50px",
                     width: "50px",
