@@ -27,7 +27,8 @@ import MinhaImg from "../img/fund.webp";
 import ImgBackum from "../img/Bilingue.jpg";
 import ImgFrontUm from "../img/pexels-matheus-oliveira-10949676.jpg";
 import ImgFrontDdois from "../img/bank.webp";
-import ImgFrontDTreis from "../img/pexels-jazz-mhd-4057629.jpg";
+import ImgFrontDTreis from "../img/CardTech1.jpeg";
+import ImgFrontDQuatro from "../img/CardTech.webp";
 import "./cssGlobais.css";
 
 function Home() {
@@ -117,6 +118,32 @@ function Home() {
                   </a>
                 </CardProjeto>
                 <CardProjeto>
+                  <a href="https://myphrases.vercel.app/" target="_Blanck">
+                    <CardFrontkQuatro>
+                      <CardDate>17/Setembro</CardDate>
+                      <CardTitle>Home e-Commerce</CardTitle>
+                      <div>
+                        <FaReact
+                          style={{
+                            height: "90px",
+                            width: "90px",
+                            paddingTop: "25px",
+                            paddingBottom: "25px",
+                            color: "#1e90ff",
+                          }}
+                        />
+                      </div>
+                      <CardFerramentas>
+                        Vite/React/JavaScript/Tailwind
+                      </CardFerramentas>
+
+                      <CardFerramentas style={{ marginTop: "10px" }}>
+                        Desktop
+                      </CardFerramentas>
+                    </CardFrontkQuatro>
+                  </a>
+                </CardProjeto>
+                <CardProjeto>
                   <a
                     href="https://bankprojeto-mbtu.vercel.app/"
                     target="_Blanck"
@@ -171,12 +198,6 @@ function Home() {
                       </CardFerramentas>
                     </CardFrontkUm>
                   </a>
-                </CardProjeto>
-
-                <CardProjeto>
-                  <CardDate></CardDate>
-                  <CardTitle></CardTitle>
-                  <CardFerramentas></CardFerramentas>
                 </CardProjeto>
               </SectionProjetos>
             </FrontEnd>
@@ -291,8 +312,9 @@ function Home() {
                   }}
                 />
               </CardSkill>
+
               <CardSkill>
-                <SiJavascript
+                <SiStyledcomponents
                   style={{
                     height: "50px",
                     width: "50px",
@@ -356,7 +378,7 @@ function Home() {
             </Skills>
             <Skills>
               <CardSkill>
-                <SiStyledcomponents
+                <SiJavascript
                   style={{
                     height: "50px",
                     width: "50px",
@@ -531,6 +553,10 @@ const CardConteundo = styled.div`
     filter: blur(0px);
     transform: scale(1.2);
   }
+`;
+
+const CardFrontkQuatro = styled(CardConteundo)`
+  background-image: url(${ImgFrontDQuatro});
 `;
 
 const CardFrontkTreis = styled(CardConteundo)`
@@ -753,9 +779,9 @@ const TextTitleUm = styled.div`
   padding: 50px;
   padding-top: 200px;
   padding-bottom: 0px;
-  font-size: 30px;
+  font-size: 40px;
   font-family: "Kanit", sans-serif;
-  color: #210733;
+  color: #fdfdfd;
 `;
 const TextTitleDois = styled.div`
   font-size: 25px;
