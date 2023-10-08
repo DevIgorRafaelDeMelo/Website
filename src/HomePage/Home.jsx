@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled } from "styled-components";
 import {
   AiFillGithub,
@@ -6,6 +6,7 @@ import {
   AiFillHtml5,
   AiOutlineGithub,
   AiFillInstagram,
+  AiOutlineClose,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 import { FaCss3Alt, FaReact } from "react-icons/fa";
@@ -21,19 +22,38 @@ import {
   SiStyledcomponents,
   SiMysql,
   SiPython,
+  SiNodedotjs,
+  SiSequelize,
+  SiNodemon,
+  SiVisualstudio,
+  SiPostman,
+  SiVite,
+  SiNpm,
+  SiEslint,
 } from "react-icons/si";
 import ImgFundo from "../img/pexels-white-noiise-8992445.jpg";
-import MinhaImg from "../img/fund.webp";
+import MinhaImg from "../img/FundoDark.jpeg";
 import ImgBackum from "../img/Bilingue.jpg";
+import CardBackUmm from "../img/CardBackUm.jpeg";
 import ImgFrontUm from "../img/pexels-matheus-oliveira-10949676.jpg";
-import ImgFrontDdois from "../img/bank.webp";
+import ImgFrontDdois from "../img/CardBackUm.jpeg";
 import ImgFrontDTreis from "../img/CardTech1.jpeg";
 import ImgFrontDQuatro from "../img/CardTech.webp";
 import "./cssGlobais.css";
+import BackEnd from "./ProjetosBack";
 
 function Home() {
+  const [card, setCard] = useState(0);
   return (
     <>
+      {card === 1 ? <BackEnd card="1" /> : <></>}
+      {card !== 0 ? (
+        <Fecha onClick={() => setCard(0)}>
+          <AiOutlineClose />
+        </Fecha>
+      ) : (
+        <></>
+      )}
       <Header>
         <SectionMenu>
           <ItenMenuMain href="">Inicio</ItenMenuMain>
@@ -42,13 +62,13 @@ function Home() {
           <ItenMenu href="#Soft">Skills software</ItenMenu>
         </SectionMenu>
       </Header>
-      <MainContainer>
+      <MainContainer onClick={() => setCard(0)}>
         <Parallax>
           <HomePage id="Header">
             <TitleHome>
               <Text1>Olá, Eu sou </Text1>
               <Text2>Igor Rafael de Melo</Text2>
-              <Text3>Web Desenvolvedor / ReactJs / Python</Text3>
+              <Text3>Web Desenvolvedor / ReactJs / NodeJs</Text3>
             </TitleHome>
             <IconMenu>
               <a href="https://github.com/DevIgorRafaelDeMelo" target="_Blanck">
@@ -74,19 +94,146 @@ function Home() {
           <Sobre id="Sobre">
             <BoxUm></BoxUm>
             <BoxDois>
-              <TextTitleUm>Um pouco sobre mim</TextTitleUm>
+              <TextTitleUm>Sobre</TextTitleUm>
               <TextTitleDois>
-                Olá me chamo Igor Rafael de Melo, e sou estudante de
-                programação, mais especificamente em desenvolvimento Web, possou
-                diversos curso e formação técnica em análise de sistemas
-                Web/Mobile, estou a procura de uma oportunidade na área de Ti,
-                nesse portfólio a sistemas Back e Front-End que desenvolvi
-                durante meu aprendizado.
+                Sou um estudante de programação com especialização em
+                desenvolvimento Web. Tenho uma forte determinação em entrar no
+                mercado de TI e estou buscando uma oportunidade na área. Possuo
+                diversos cursos e formação técnica em análise de sistemas Web, o
+                que me permite desenvolver sistemas tanto no Back-End quanto no
+                Front-End. Neste portfólio apresento os projetos que desenvolvi
+                durante meu aprendizado, demonstrando minha habilidade e
+                capacidade de criar soluções. Estou disponível para atuar como
+                estagiário ou profissional júnior na área de desenvolvimento
+                web. Com uma determinação inabalável, estou totalmente focado em
+                aprender e aprimorar minhas habilidades de análise de sistemas.
+                Tenho certeza de que serei um ativo valioso para qualquer
+                empresa ou organização que me der a oportunidade de me tornar
+                parte de sua equipe de TI.
               </TextTitleDois>
+              <h1>Um pouco a mais</h1>
+              <TextTitleDois>
+                Desde os meus 15 anos, trabalho, coincidindo com a mesma idade
+                em que comecei a viver sozinho. Além disso, sou ex-militar e
+                agora reservista. Atualmente, desempenho a profissão de auxiliar
+                de faturamento. Tenho sempre a busca pelo crescimento e
+                aprimoramento pessoal como meta. Resido em uma pequena cidade
+                gaúcha chamada Dois Irmãos. Um dos meus maiores talentos é o
+                desenho realista e, caso esteja interessado, meu perfil no
+                Instagram está disponível para visualização logo abaixo.
+              </TextTitleDois>
+              <h1>Confira</h1>
+              <a
+                href="https://www.instagram.com/igor.rafael.melo/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillInstagram style={{ width: "40px" }} />
+              </a>
             </BoxDois>
           </Sobre>
           <ProjetosDesenvolvidos id="Projetos">
             <Textprojetos>Projetos</Textprojetos>
+            <FrontEnd>
+              <TextSkill>Back-End</TextSkill>
+              <LineHorizontal></LineHorizontal>
+              <SectionProjetos>
+                <CardProjeto onClick={() => setTimeout(() => setCard(1), 1)}>
+                  <div style={{ textDecoration: "none" }}>
+                    <CardBackAlpha>
+                      <CardDate>07/Outubro</CardDate>
+                      <CardTitle>ORM NodeJs</CardTitle>
+                      <div>
+                        <SiNodedotjs
+                          style={{
+                            height: "90px",
+                            width: "90px",
+                            paddingTop: "25px",
+                            paddingBottom: "25px",
+                            color: "#038605",
+                          }}
+                        />
+                      </div>
+                      <CardFerramentas>JavaScript</CardFerramentas>
+                    </CardBackAlpha>
+                  </div>
+                </CardProjeto>
+                <CardProjeto>
+                  <a
+                    style={{ textDecoration: "none" }}
+                    href="https://github.com/DevIgorRafaelDeMelo/PythonCursoAvancado"
+                    target="_Blanck"
+                  >
+                    <CardBackUm>
+                      <CardDate>09/Agosto</CardDate>
+                      <CardTitle>Jogo da forca</CardTitle>
+                      <div>
+                        <SiPython
+                          style={{
+                            height: "90px",
+                            width: "90px",
+                            paddingTop: "25px",
+                            paddingBottom: "25px",
+                            color: "#0762D0",
+                          }}
+                        />
+                      </div>
+                      <CardFerramentas>Python</CardFerramentas>
+                    </CardBackUm>
+                  </a>
+                </CardProjeto>
+                <CardProjeto>
+                  <a
+                    style={{ textDecoration: "none" }}
+                    href="https://github.com/DevIgorRafaelDeMelo/OObjValidador"
+                    target="_Blanck"
+                  >
+                    <CardBackUm>
+                      <CardDate>09/Setenbro</CardDate>
+                      <CardTitle>Validador Login OObj</CardTitle>
+                      <div>
+                        <SiPython
+                          style={{
+                            height: "90px",
+                            width: "90px",
+                            paddingTop: "25px",
+                            paddingBottom: "25px",
+                            color: "#0762D0",
+                          }}
+                        />
+                      </div>
+                      <CardFerramentas>Python</CardFerramentas>
+                    </CardBackUm>
+                  </a>
+                </CardProjeto>
+                <CardProjeto>
+                  <a
+                    style={{ textDecoration: "none" }}
+                    href="https://github.com/DevIgorRafaelDeMelo/Integracao-React-Mysql-nodeJs"
+                    target="_Blanck"
+                  >
+                    <CardBackUm>
+                      <CardDate>03/Março</CardDate>
+                      <CardTitle>Bilíngue</CardTitle>
+                      <div>
+                        <SiJavascript
+                          style={{
+                            height: "90px",
+                            width: "90px",
+                            paddingTop: "25px",
+                            paddingBottom: "25px",
+                            color: "#FBFF04",
+                          }}
+                        />
+                      </div>
+                      <CardFerramentas>
+                        JavaScript/Express/Axios/Api/Mysql
+                      </CardFerramentas>
+                    </CardBackUm>
+                  </a>
+                </CardProjeto>
+              </SectionProjetos>
+            </FrontEnd>
             <FrontEnd>
               <TextSkill>Front-End</TextSkill>
               <LineHorizontal></LineHorizontal>
@@ -201,93 +348,6 @@ function Home() {
                 </CardProjeto>
               </SectionProjetos>
             </FrontEnd>
-            <FrontEnd>
-              <TextSkill>Back-End</TextSkill>
-              <LineHorizontal></LineHorizontal>
-
-              <SectionProjetos>
-                <CardProjeto>
-                  <a
-                    style={{ textDecoration: "none" }}
-                    href="https://github.com/DevIgorRafaelDeMelo/PythonCursoAvancado"
-                    target="_Blanck"
-                  >
-                    <CardBackUm>
-                      <CardDate>09/Agosto</CardDate>
-                      <CardTitle>Jogo da forca</CardTitle>
-                      <div>
-                        <SiPython
-                          style={{
-                            height: "90px",
-                            width: "90px",
-                            paddingTop: "25px",
-                            paddingBottom: "25px",
-                            color: "#0762D0",
-                          }}
-                        />
-                      </div>
-                      <CardFerramentas>Python</CardFerramentas>
-                    </CardBackUm>
-                  </a>
-                </CardProjeto>
-                <CardProjeto>
-                  <a
-                    style={{ textDecoration: "none" }}
-                    href="https://github.com/DevIgorRafaelDeMelo/OObjValidador"
-                    target="_Blanck"
-                  >
-                    <CardBackUm>
-                      <CardDate>09/Setenbro</CardDate>
-                      <CardTitle>Validador Login OObj</CardTitle>
-                      <div>
-                        <SiPython
-                          style={{
-                            height: "90px",
-                            width: "90px",
-                            paddingTop: "25px",
-                            paddingBottom: "25px",
-                            color: "#0762D0",
-                          }}
-                        />
-                      </div>
-                      <CardFerramentas>Python</CardFerramentas>
-                    </CardBackUm>
-                  </a>
-                </CardProjeto>
-                <CardProjeto>
-                  <a
-                    style={{ textDecoration: "none" }}
-                    href="https://github.com/DevIgorRafaelDeMelo/Integracao-React-Mysql-nodeJs"
-                    target="_Blanck"
-                  >
-                    <CardBackUm>
-                      <CardDate>03/Março</CardDate>
-                      <CardTitle>Bilíngue</CardTitle>
-                      <div>
-                        <SiJavascript
-                          style={{
-                            height: "90px",
-                            width: "90px",
-                            paddingTop: "25px",
-                            paddingBottom: "25px",
-                            color: "#FBFF04",
-                          }}
-                        />
-                      </div>
-                      <CardFerramentas>
-                        JavaScript/Express/Axios/Api/Mysql
-                      </CardFerramentas>
-                    </CardBackUm>
-                  </a>
-                </CardProjeto>
-
-                <CardProjeto>
-                  <CardDate></CardDate>
-                  <CardTitle></CardTitle>
-                  <CardFerramentas></CardFerramentas>
-                </CardProjeto>
-              </SectionProjetos>
-            </FrontEnd>
           </ProjetosDesenvolvidos>
           <Formação id="Soft">
             <Textprojetos>Software Skills</Textprojetos>
@@ -312,7 +372,49 @@ function Home() {
                   }}
                 />
               </CardSkill>
-
+              <CardSkill>
+                {console.log(SiTailwindcss)}
+                <SiTailwindcss
+                  style={{
+                    height: "50px",
+                    width: "50px",
+                    paddingTop: "25px",
+                    paddingBottom: "25px",
+                  }}
+                />
+              </CardSkill>
+              <CardSkill>
+                <FaReact
+                  style={{
+                    height: "50px",
+                    width: "50px",
+                    paddingTop: "25px",
+                    paddingBottom: "25px",
+                  }}
+                />
+              </CardSkill>
+            </Skills>
+            <Skills>
+              <CardSkill>
+                <SiJavascript
+                  style={{
+                    height: "50px",
+                    width: "50px",
+                    paddingTop: "25px",
+                    paddingBottom: "25px",
+                  }}
+                />
+              </CardSkill>
+              <CardSkill>
+                <BsBootstrapFill
+                  style={{
+                    height: "50px",
+                    width: "50px",
+                    paddingTop: "25px",
+                    paddingBottom: "25px",
+                  }}
+                />
+              </CardSkill>
               <CardSkill>
                 <SiStyledcomponents
                   style={{
@@ -336,7 +438,7 @@ function Home() {
             </Skills>
             <Skills>
               <CardSkill>
-                <BsBootstrapFill
+                <SiVite
                   style={{
                     height: "50px",
                     width: "50px",
@@ -346,7 +448,7 @@ function Home() {
                 />
               </CardSkill>
               <CardSkill>
-                <SiTailwindcss
+                <SiMysql
                   style={{
                     height: "50px",
                     width: "50px",
@@ -355,18 +457,41 @@ function Home() {
                   }}
                 />
               </CardSkill>
-              <CardSkill>
-                <FaReact
-                  style={{
-                    height: "50px",
-                    width: "50px",
-                    paddingTop: "25px",
-                    paddingBottom: "25px",
-                  }}
-                />
-              </CardSkill>
+            </Skills>
+            <Textprojetos>Ferramentas</Textprojetos>
+            <Skills>
               <CardSkill>
                 <AiOutlineGithub
+                  style={{
+                    height: "50px",
+                    width: "50px",
+                    paddingTop: "25px",
+                    paddingBottom: "25px",
+                  }}
+                />
+              </CardSkill>
+              <CardSkill>
+                <SiNodemon
+                  style={{
+                    height: "50px",
+                    width: "50px",
+                    paddingTop: "25px",
+                    paddingBottom: "25px",
+                  }}
+                />
+              </CardSkill>
+              <CardSkill>
+                <SiVisualstudio
+                  style={{
+                    height: "50px",
+                    width: "50px",
+                    paddingTop: "25px",
+                    paddingBottom: "25px",
+                  }}
+                />
+              </CardSkill>
+              <CardSkill>
+                <SiNpm
                   style={{
                     height: "50px",
                     width: "50px",
@@ -378,7 +503,7 @@ function Home() {
             </Skills>
             <Skills>
               <CardSkill>
-                <SiJavascript
+                <SiEslint
                   style={{
                     height: "50px",
                     width: "50px",
@@ -388,7 +513,7 @@ function Home() {
                 />
               </CardSkill>
               <CardSkill>
-                <SiPython
+                <SiPostman
                   style={{
                     height: "50px",
                     width: "50px",
@@ -398,7 +523,7 @@ function Home() {
                 />
               </CardSkill>
               <CardSkill>
-                <SiMysql
+                <SiSequelize
                   style={{
                     height: "50px",
                     width: "50px",
@@ -472,9 +597,18 @@ const SectionIconsLinks = styled.div`
   color: white;
   justify-content: space-between;
 `;
-
+const Fecha = styled.div`
+  position: fixed;
+  top: 14%;
+  left: 14%;
+  width: 40px;
+  height: 40px;
+  background: #01b7ff;
+  z-index: 2000000;
+  color: white;
+  font-size: 40px;
+`;
 const FooterIcons = styled.div``;
-
 const LineFotter = styled.div`
   height: 1px;
   width: 50%;
@@ -488,7 +622,6 @@ const LineFotter = styled.div`
   margin: auto;
   margin-top: 40px;
 `;
-
 const Footer = styled.div`
   margin-top: 100px;
   text-align: center;
@@ -496,7 +629,6 @@ const Footer = styled.div`
   padding-top: 20px;
   padding-bottom: 40px;
 `;
-
 const SectionFooter = styled.div`
   display: flex;
   color: white;
@@ -508,7 +640,6 @@ const SectionFooter = styled.div`
   font-size: 10px;
   padding-top: 50px;
 `;
-
 const Links = styled.a`
   text-decoration: none;
   color: white;
@@ -518,7 +649,6 @@ const Links = styled.a`
     border-bottom: solid 1px white;
   }
 `;
-
 const CardSkill = styled.div`
   width: 22%;
   padding-top: 30px;
@@ -531,7 +661,6 @@ const CardSkill = styled.div`
     background: #0350b6;
   }
 `;
-
 const Skills = styled.div`
   display: flex;
   padding-top: 50px;
@@ -540,9 +669,7 @@ const Skills = styled.div`
   margin: auto;
   color: white;
 `;
-
 const Formação = styled.div``;
-
 const CardConteundo = styled.div`
   background-image: url(${ImgFundo});
   background-size: cover;
@@ -554,25 +681,26 @@ const CardConteundo = styled.div`
     transform: scale(1.2);
   }
 `;
-
 const CardFrontkQuatro = styled(CardConteundo)`
   background-image: url(${ImgFrontDQuatro});
 `;
-
 const CardFrontkTreis = styled(CardConteundo)`
   background-image: url(${ImgFrontDTreis});
 `;
-
 const CardFrontkDois = styled(CardConteundo)`
   background-image: url(${ImgFrontDdois});
 `;
 const CardBackUm = styled(CardConteundo)`
   background-image: url(${ImgBackum});
 `;
+const CardBackAlpha = styled(CardConteundo)`
+  background-image: url(${CardBackUmm});
+  background-size: cover;
+  height: 100vh;
+`;
 const CardFrontkUm = styled(CardConteundo)`
   background-image: url(${ImgFrontUm});
 `;
-
 const LineHorizontal = styled.div`
   height: 2px;
   width: 40%;
@@ -586,28 +714,24 @@ const LineHorizontal = styled.div`
   margin: auto;
   margin-top: 30px;
 `;
-
 const CardFerramentas = styled.div`
   margin-top: 10px;
   font-size: 15px;
   font-family: "Kanit", sans-serif;
   color: white;
 `;
-
 const CardTitle = styled.div`
   color: white;
   font-weight: 500;
   font-size: 30px;
   font-family: "Kanit", sans-serif;
 `;
-
 const CardDate = styled.div`
   color: white;
   padding-top: 130px;
   font-size: 10px;
   font-family: "Kanit", sans-serif;
 `;
-
 const CardProjeto = styled.div`
   height: 60vh;
   background: black;
@@ -615,33 +739,28 @@ const CardProjeto = styled.div`
   border-radius: 2%;
   overflow: hidden;
 `;
-
 const SectionProjetos = styled.div`
   display: flex;
   width: 80%;
   padding-bottom: 30px;
   padding-top: 30px;
   margin: auto;
+  padding-right: 1.6%;
   justify-content: space-between;
 `;
-
 const TextSkill = styled.div``;
-
 const FrontEnd = styled.div`
   text-align: center;
   margin-top: 50px;
   font-size: 20px;
 `;
-
 const Textprojetos = styled.div`
   text-align: center;
   padding-top: 100px;
   font-size: 40px;
   font-family: "Kanit", sans-serif;
 `;
-
 const ProjetosDesenvolvidos = styled.div``;
-
 const MainContainer = styled.div`
   perspective: 1px;
   transform-style: preserve-3d;
@@ -714,7 +833,6 @@ const TitleHome = styled.div`
   margin-top: 25vh;
   font-size: 40px;
 `;
-
 const Text1 = styled.div`
   color: #f7f7f7;
   font-size: 34px;
@@ -727,7 +845,7 @@ const Text2 = styled.div`
   padding-top: 30px;
 `;
 const Text3 = styled.div`
-  color: #505050;
+  color: #f8f8f8;
   font-size: 24px;
   font-weight: 300;
   margin-top: 15px;
@@ -765,6 +883,7 @@ const Sobre = styled.section`
 const BoxUm = styled.div`
   width: 50%;
   height: 100vh;
+  overflow: hidden;
   background-image: url(${MinhaImg});
   background-size: cover;
   margin: 0px;
@@ -772,22 +891,44 @@ const BoxUm = styled.div`
 `;
 const BoxDois = styled.div`
   width: 50%;
+  font-family: "Kanit", sans-serif;
   background: #0677e0;
+  h1 {
+    margin-left: 50px;
+    font-size: 25px;
+    font-weight: 300;
+    color: white;
+  }
+  h2 {
+    color: white;
+    margin-left: 50px;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  a {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    font-size: 50px;
+    margin-left: 50px;
+    color: rgb(228, 64, 95);
+  }
 `;
 const TextTitleUm = styled.div`
   font-weight: 800px;
   padding: 50px;
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 0px;
   font-size: 40px;
   font-family: "Kanit", sans-serif;
   color: #fdfdfd;
 `;
 const TextTitleDois = styled.div`
-  font-size: 25px;
+  font-size: 20px;
   padding: 50px;
   width: 70%;
   color: white;
-  padding-top: 50px;
+  font-weight: 200;
+  padding-top: 0px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 `;
