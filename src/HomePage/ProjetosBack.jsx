@@ -10,6 +10,7 @@ import {
   SiNpm,
 } from "react-icons/si";
 import { BsFiletypeJson } from "react-icons/bs";
+import CursoApiExpress from "../img/CursoApiEspress.jpg";
 
 import { styled } from "styled-components";
 
@@ -63,6 +64,64 @@ function BackEnd(props) {
                 rel="noreferrer"
               >
                 Documentação
+              </a>
+              <a
+                href="https://cursos.alura.com.br/user/rafaelmelo765/course/orm-nodejs-avancando-sequelize/formalCertificate"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Certificado
+              </a>
+            </section>
+          </BoxDados>
+          <BoxIframe>
+            <Iframe src="https://lottie.host/?file=b97326df-3985-4cad-baea-f3664fd9a74c/WIhC0XzNzR.json"></Iframe>
+          </BoxIframe>
+        </CardProject>
+      </FullScream>
+    );
+  }
+  if (props.card === "2") {
+    return (
+      <FullScream>
+        <CardProject>
+          <BoxDados>
+            <h1>Api Express / NodeJs</h1>
+            <h3>
+              O projeto em questão tem como objetivo principal a criação de uma
+              biblioteca fictícia por meio da manipulação de uma API, utilizando
+              a tecnologia Express. Durante o desenvolvimento, foram utilizados
+              recursos adicionais como nodemon, VSCode e Postman. Esse projeto
+              faz parte do curso "Alura Node.js: Projeto full stack criando uma
+              API com Express".
+            </h3>
+            <h2>Tecnológicas Utilizadas</h2>
+            <div>
+              <SiJavascript style={{ paddingLeft: "80px" }} />
+              <SiNodedotjs style={{ paddingRight: "80px" }} />
+            </div>
+            <h2>Ferramentas </h2>
+            <div>
+              <BsFiletypeJson />
+              <SiNodemon />
+              <SiVisualstudio />
+              <SiPostman />
+              <SiNpm />
+            </div>
+            <section>
+              <a
+                href="https://github.com/DevIgorRafaelDeMelo/Api-Express"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Repositório
+              </a>
+              <a
+                href="https://cursos.alura.com.br/user/rafaelmelo765/course/node-primeira-api-express/formalCertificate"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Certificado
               </a>
             </section>
           </BoxDados>
@@ -124,7 +183,7 @@ const BoxDados = styled.div`
     justify-content: space-between;
     display: flex;
     font-family: "Kanit", sans-serif;
-    width: 50%;
+    width: 80%;
     margin: auto;
     margin-top: 10%;
     a {

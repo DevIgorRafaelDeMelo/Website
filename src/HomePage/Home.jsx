@@ -15,6 +15,7 @@ import {
   BsBootstrapFill,
   BsDiscord,
   BsLinkedin,
+  BsFiletypeJson,
 } from "react-icons/bs";
 import {
   SiJavascript,
@@ -46,6 +47,7 @@ function Home() {
   const [card, setCard] = useState(0);
   return (
     <>
+      {card === 2 ? <BackEnd card="2" /> : <></>}
       {card === 1 ? <BackEnd card="1" /> : <></>}
       {card !== 0 ? (
         <Fecha onClick={() => setCard(0)}>
@@ -68,7 +70,7 @@ function Home() {
             <TitleHome>
               <Text1>Olá, Eu sou </Text1>
               <Text2>Igor Rafael de Melo</Text2>
-              <Text3>Web Desenvolvedor / ReactJs / NodeJs</Text3>
+              <Text3>Análista e desenvolvedor de sistemas </Text3>
             </TitleHome>
             <IconMenu>
               <a href="https://github.com/DevIgorRafaelDeMelo" target="_Blanck">
@@ -158,6 +160,26 @@ function Home() {
                     </CardBackAlpha>
                   </div>
                 </CardProjeto>
+                <CardProjeto onClick={() => setTimeout(() => setCard(2), 1)}>
+                  <div style={{ textDecoration: "none" }}>
+                    <CardBackBravo>
+                      <CardDate>10/Janeiro</CardDate>
+                      <CardTitle>API NodeJs</CardTitle>
+                      <div>
+                        <SiNodedotjs
+                          style={{
+                            height: "90px",
+                            width: "90px",
+                            paddingTop: "25px",
+                            paddingBottom: "25px",
+                            color: "#038605",
+                          }}
+                        />
+                      </div>
+                      <CardFerramentas>JavaScript / Nodejs</CardFerramentas>
+                    </CardBackBravo>
+                  </div>
+                </CardProjeto>
                 <CardProjeto>
                   <a
                     style={{ textDecoration: "none" }}
@@ -190,7 +212,7 @@ function Home() {
                   >
                     <CardBackUm>
                       <CardDate>09/Setenbro</CardDate>
-                      <CardTitle>Validador Login OObj</CardTitle>
+                      <CardTitle>Validador Login</CardTitle>
                       <div>
                         <SiPython
                           style={{
@@ -206,6 +228,8 @@ function Home() {
                     </CardBackUm>
                   </a>
                 </CardProjeto>
+              </SectionProjetos>
+              <SectionProjetos>
                 <CardProjeto>
                   <a
                     style={{ textDecoration: "none" }}
@@ -239,36 +263,10 @@ function Home() {
               <LineHorizontal></LineHorizontal>
               <SectionProjetos>
                 <CardProjeto>
-                  <a href="https://play-tradutor.vercel.app/" target="_Blanck">
-                    <CardFrontkTreis>
-                      <CardDate>09/Agosto</CardDate>
-                      <CardTitle>Jogo traduz</CardTitle>
-                      <div>
-                        <FaReact
-                          style={{
-                            height: "90px",
-                            width: "90px",
-                            paddingTop: "25px",
-                            paddingBottom: "25px",
-                            color: "#1e90ff",
-                          }}
-                        />
-                      </div>
-                      <CardFerramentas>
-                        Vite/React/JavaScript/Tailwind
-                      </CardFerramentas>
-
-                      <CardFerramentas style={{ marginTop: "10px" }}>
-                        Desktop | Mobile
-                      </CardFerramentas>
-                    </CardFrontkTreis>
-                  </a>
-                </CardProjeto>
-                <CardProjeto>
                   <a href="https://myphrases.vercel.app/" target="_Blanck">
                     <CardFrontkQuatro>
                       <CardDate>17/Setembro</CardDate>
-                      <CardTitle>Home e-Commerce</CardTitle>
+                      <CardTitle>e-Commerce</CardTitle>
                       <div>
                         <FaReact
                           style={{
@@ -288,34 +286,6 @@ function Home() {
                         Desktop
                       </CardFerramentas>
                     </CardFrontkQuatro>
-                  </a>
-                </CardProjeto>
-                <CardProjeto>
-                  <a
-                    href="https://bankprojeto-mbtu.vercel.app/"
-                    target="_Blanck"
-                  >
-                    <CardFrontkDois>
-                      <CardDate>29/Julho</CardDate>
-                      <CardTitle>MyBank</CardTitle>
-                      <div>
-                        <FaReact
-                          style={{
-                            height: "90px",
-                            width: "90px",
-                            paddingTop: "25px",
-                            paddingBottom: "25px",
-                            color: "#1e90ff",
-                          }}
-                        />
-                      </div>
-                      <CardFerramentas>
-                        Vite/React/JavaScript/Tailwild
-                      </CardFerramentas>
-                      <CardFerramentas style={{ marginTop: "10px" }}>
-                        Desktop
-                      </CardFerramentas>
-                    </CardFrontkDois>
                   </a>
                 </CardProjeto>
                 <CardProjeto>
@@ -344,6 +314,34 @@ function Home() {
                         Desktop
                       </CardFerramentas>
                     </CardFrontkUm>
+                  </a>
+                </CardProjeto>
+                <CardProjeto>
+                  <a
+                    href="https://bankprojeto-mbtu.vercel.app/"
+                    target="_Blanck"
+                  >
+                    <CardFrontkDois>
+                      <CardDate>29/Julho</CardDate>
+                      <CardTitle>MyBank</CardTitle>
+                      <div>
+                        <FaReact
+                          style={{
+                            height: "90px",
+                            width: "90px",
+                            paddingTop: "25px",
+                            paddingBottom: "25px",
+                            color: "#1e90ff",
+                          }}
+                        />
+                      </div>
+                      <CardFerramentas>
+                        Vite/React/JavaScript/Tailwild
+                      </CardFerramentas>
+                      <CardFerramentas style={{ marginTop: "10px" }}>
+                        Desktop
+                      </CardFerramentas>
+                    </CardFrontkDois>
                   </a>
                 </CardProjeto>
               </SectionProjetos>
@@ -457,6 +455,16 @@ function Home() {
                   }}
                 />
               </CardSkill>
+              <CardSkill>
+                <BsFiletypeJson
+                  style={{
+                    height: "50px",
+                    width: "50px",
+                    paddingTop: "25px",
+                    paddingBottom: "25px",
+                  }}
+                />
+              </CardSkill>
             </Skills>
             <Textprojetos>Ferramentas</Textprojetos>
             <Skills>
@@ -549,35 +557,37 @@ function Home() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <AiFillGithub style={{ width: "40px" }} />
+                  <AiFillGithub style={{ width: "40px", height: "40px" }} />
                 </a>
                 <a
                   href="https://www.instagram.com/igor.rafael.melo/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <AiFillInstagram style={{ width: "40px" }} />
+                  <AiFillInstagram style={{ width: "40px", height: "40px" }} />
                 </a>
                 <a
                   href="https://contate.me/igorrmd"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <AiOutlineWhatsApp style={{ width: "40px" }} />
+                  <AiOutlineWhatsApp
+                    style={{ width: "40px", height: "40px" }}
+                  />
                 </a>
                 <a
                   href="https://discord.gg/6Vc9SDyg"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <BsDiscord style={{ width: "40px" }} />
+                  <BsDiscord style={{ width: "40px", height: "40px" }} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/igor-rafael-de-melo-3b9a69240/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <BsLinkedin style={{ width: "40px" }} />
+                  <BsLinkedin style={{ width: "40px", height: "40px" }} />
                 </a>
               </SectionIconsLinks>
             </FooterIcons>
@@ -590,13 +600,6 @@ function Home() {
 
 export default Home;
 
-const SectionIconsLinks = styled.div`
-  width: 40%;
-  margin: auto;
-  margin-top: 30px;
-  color: white;
-  justify-content: space-between;
-`;
 const Fecha = styled.div`
   position: fixed;
   top: 14%;
@@ -609,6 +612,7 @@ const Fecha = styled.div`
   font-size: 40px;
 `;
 const FooterIcons = styled.div``;
+
 const LineFotter = styled.div`
   height: 1px;
   width: 50%;
@@ -632,12 +636,12 @@ const Footer = styled.div`
 const SectionFooter = styled.div`
   display: flex;
   color: white;
-  width: 25%;
+  width: 50%;
   margin: auto;
   justify-content: space-between;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 100;
-  font-size: 10px;
+  font-size: 17px;
   padding-top: 50px;
 `;
 const Links = styled.a`
@@ -670,6 +674,7 @@ const Skills = styled.div`
   color: white;
 `;
 const Formação = styled.div``;
+
 const CardConteundo = styled.div`
   background-image: url(${ImgFundo});
   background-size: cover;
@@ -695,6 +700,11 @@ const CardBackUm = styled(CardConteundo)`
 `;
 const CardBackAlpha = styled(CardConteundo)`
   background-image: url(${CardBackUmm});
+  background-size: cover;
+  height: 100vh;
+`;
+const CardBackBravo = styled(CardConteundo)`
+  background-image: url(${ImgFrontDTreis});
   background-size: cover;
   height: 100vh;
 `;
@@ -738,6 +748,7 @@ const CardProjeto = styled.div`
   width: 23%;
   border-radius: 2%;
   overflow: hidden;
+  margin: auto;
 `;
 const SectionProjetos = styled.div`
   display: flex;
@@ -749,6 +760,7 @@ const SectionProjetos = styled.div`
   justify-content: space-between;
 `;
 const TextSkill = styled.div``;
+
 const FrontEnd = styled.div`
   text-align: center;
   margin-top: 50px;
@@ -761,6 +773,7 @@ const Textprojetos = styled.div`
   font-family: "Kanit", sans-serif;
 `;
 const ProjetosDesenvolvidos = styled.div``;
+
 const MainContainer = styled.div`
   perspective: 1px;
   transform-style: preserve-3d;
@@ -886,6 +899,7 @@ const BoxUm = styled.div`
   overflow: hidden;
   background-image: url(${MinhaImg});
   background-size: cover;
+  height: 1000px;
   margin: 0px;
   padding: 0px;
 `;
@@ -924,11 +938,21 @@ const TextTitleUm = styled.div`
   color: #fdfdfd;
 `;
 const TextTitleDois = styled.div`
-  font-size: 20px;
+  font-size: 1rem;
   padding: 50px;
   width: 70%;
   color: white;
   font-weight: 200;
   padding-top: 0px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+`;
+const SectionIconsLinks = styled.div`
+  width: 70%;
+  margin: auto;
+  margin-top: 30px;
+  color: white;
+  justify-content: space-between;
+  a {
+    padding: 20px;
+  }
 `;
