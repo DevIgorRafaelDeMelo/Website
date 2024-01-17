@@ -47,6 +47,7 @@ function Home() {
   const [card, setCard] = useState(0);
   return (
     <>
+      {card === 3 ? <BackEnd card="3" /> : <></>}
       {card === 2 ? <BackEnd card="2" /> : <></>}
       {card === 1 ? <BackEnd card="1" /> : <></>}
       {card !== 0 ? (
@@ -156,7 +157,9 @@ function Home() {
                           }}
                         />
                       </div>
-                      <CardFerramentas>JavaScript</CardFerramentas>
+                      <CardFerramentas>
+                        JavaScript / Sequelize / SQL
+                      </CardFerramentas>
                     </CardBackAlpha>
                   </div>
                 </CardProjeto>
@@ -176,7 +179,7 @@ function Home() {
                           }}
                         />
                       </div>
-                      <CardFerramentas>JavaScript / Nodejs</CardFerramentas>
+                      <CardFerramentas>JavaScript / API rest</CardFerramentas>
                     </CardBackBravo>
                   </div>
                 </CardProjeto>
@@ -263,9 +266,33 @@ function Home() {
               <LineHorizontal></LineHorizontal>
               <SectionProjetos>
                 <CardProjeto>
+                  <CardFrontkTreis
+                    onClick={() => setTimeout(() => setCard(3), 1)}
+                  >
+                    <CardDate>10/Janeiro/24</CardDate>
+                    <CardTitle>Digital Cut</CardTitle>
+                    <div>
+                      <FaReact
+                        style={{
+                          height: "90px",
+                          width: "90px",
+                          paddingTop: "25px",
+                          paddingBottom: "25px",
+                          color: "#1e90ff",
+                        }}
+                      />
+                    </div>
+                    <CardFerramentas>React / StyleComponets</CardFerramentas>
+
+                    <CardFerramentas style={{ marginTop: "10px" }}>
+                      Mobile
+                    </CardFerramentas>
+                  </CardFrontkTreis>
+                </CardProjeto>
+                <CardProjeto>
                   <a href="https://myphrases.vercel.app/" target="_Blanck">
                     <CardFrontkQuatro>
-                      <CardDate>17/Setembro</CardDate>
+                      <CardDate>17/Setembro/23</CardDate>
                       <CardTitle>e-Commerce</CardTitle>
                       <div>
                         <FaReact
@@ -294,7 +321,7 @@ function Home() {
                     target="_Blanck"
                   >
                     <CardFrontkUm>
-                      <CardDate>01/Abril</CardDate>
+                      <CardDate>01/Abril/23</CardDate>
                       <CardTitle>Yamaha</CardTitle>
                       <div>
                         <FaReact
@@ -322,7 +349,7 @@ function Home() {
                     target="_Blanck"
                   >
                     <CardFrontkDois>
-                      <CardDate>29/Julho</CardDate>
+                      <CardDate>29/Julho/23</CardDate>
                       <CardTitle>MyBank</CardTitle>
                       <div>
                         <FaReact

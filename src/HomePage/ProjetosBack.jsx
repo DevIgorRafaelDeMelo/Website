@@ -8,9 +8,12 @@ import {
   SiVisualstudio,
   SiPostman,
   SiNpm,
+  SiReact,
+  SiYarn,
+  SiStyledcomponents,
+  SiFigma,
 } from "react-icons/si";
 import { BsFiletypeJson } from "react-icons/bs";
-import CursoApiExpress from "../img/CursoApiEspress.jpg";
 
 import { styled } from "styled-components";
 
@@ -126,7 +129,58 @@ function BackEnd(props) {
             </section>
           </BoxDados>
           <BoxIframe>
-            <Iframe src="https://lottie.host/?file=b97326df-3985-4cad-baea-f3664fd9a74c/WIhC0XzNzR.json"></Iframe>
+            <Iframe src="https://lottie.host/embed/7822dd7b-5319-49a9-b776-38d8a1d05cb3/HPvDHH8Ahb.json"></Iframe>
+          </BoxIframe>
+        </CardProject>
+      </FullScream>
+    );
+  }
+  if (props.card === "3") {
+    return (
+      <FullScream>
+        <CardProject>
+          <BoxDados>
+            <h1>Digital Cut / ReactJs</h1>
+            <h3>
+              A plataforma Digital Cut foi desenvolvida com o objetivo de
+              auxiliar e facilitar as atividades realizadas por barbearias que
+              desejam agilizar e simplificar a programação de horários e
+              agendamentos. O projeto foi desenvolvido em grupo, no qual
+              utilizei meus conhecimentos em front-end utilizando a biblioteca
+              React para criar a interface da plataforma.
+            </h3>
+            <h2>Tecnológicas Utilizadas</h2>
+            <div style={{ justifyContent: "space-between" }}>
+              <SiJavascript />
+              <SiStyledcomponents />
+              <SiReact />
+            </div>
+            <h2>Ferramentas </h2>
+            <div>
+              <SiVisualstudio />
+              <SiPostman />
+              <SiYarn />
+              <SiFigma />
+            </div>
+            <section>
+              <a
+                href="https://github.com/DevIgorRafaelDeMelo/CutTesting"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Repositório
+              </a>
+              <a
+                href="https://cut-testing.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Web
+              </a>
+            </section>
+          </BoxDados>
+          <BoxIframe>
+            <Iframe src="https://lottie.host/embed/9bd1d96b-21a5-4a9f-95e8-40817986c68b/jKeLAyDHrW.json"></Iframe>
           </BoxIframe>
         </CardProject>
       </FullScream>
@@ -141,7 +195,7 @@ const FullScream = styled.div`
   z-index: 1000000;
   width: 80%;
   left: 10%;
-  height: 80%;
+  height: auto;
 `;
 
 const CardProject = styled.div`
@@ -183,7 +237,7 @@ const BoxDados = styled.div`
     justify-content: space-between;
     display: flex;
     font-family: "Kanit", sans-serif;
-    width: 80%;
+    width: 60%;
     margin: auto;
     margin-top: 10%;
     a {
