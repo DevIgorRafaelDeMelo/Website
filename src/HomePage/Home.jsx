@@ -9,7 +9,7 @@ import {
   AiOutlineClose,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
-import { FaCss3Alt, FaReact } from "react-icons/fa";
+import { FaCss3Alt, FaReact, FaHtml5, FaPhp } from "react-icons/fa";
 import {
   BsFiletypeScss,
   BsBootstrapFill,
@@ -47,6 +47,7 @@ function Home() {
   const [card, setCard] = useState(0);
   return (
     <>
+      {card === 4 ? <BackEnd card="4" /> : <></>}
       {card === 3 ? <BackEnd card="3" /> : <></>}
       {card === 2 ? <BackEnd card="2" /> : <></>}
       {card === 1 ? <BackEnd card="1" /> : <></>}
@@ -127,7 +128,7 @@ function Home() {
               </TextTitleDois>
               <h1>Confira</h1>
               <a
-                href="https://www.instagram.com/igor.rafael.melo/"
+                href="https://www.instagram.com/lrafaell_melo/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -267,6 +268,30 @@ function Home() {
               <SectionProjetos>
                 <CardProjeto>
                   <CardFrontkTreis
+                    onClick={() => setTimeout(() => setCard(4), 1)}
+                  >
+                    <CardDate>25/Maio/24</CardDate>
+                    <CardTitle>Burger</CardTitle>
+                    <div>
+                      <FaHtml5
+                        style={{
+                          height: "90px",
+                          width: "90px",
+                          paddingTop: "25px",
+                          paddingBottom: "25px",
+                          color: "#ff381e",
+                        }}
+                      />
+                    </div>
+                    <CardFerramentas>Html / CSS / Bootstrap</CardFerramentas>
+
+                    <CardFerramentas style={{ marginTop: "10px" }}>
+                      Responsivel
+                    </CardFerramentas>
+                  </CardFrontkTreis>
+                </CardProjeto>
+                <CardProjeto>
+                  <CardFrontkTreis
                     onClick={() => setTimeout(() => setCard(3), 1)}
                   >
                     <CardDate>10/Janeiro/24</CardDate>
@@ -305,9 +330,7 @@ function Home() {
                           }}
                         />
                       </div>
-                      <CardFerramentas>
-                        Vite/React/JavaScript/Tailwind
-                      </CardFerramentas>
+                      <CardFerramentas>Vite / React / Tailwind</CardFerramentas>
 
                       <CardFerramentas style={{ marginTop: "10px" }}>
                         Desktop
@@ -335,7 +358,7 @@ function Home() {
                         />
                       </div>
                       <CardFerramentas>
-                        ReactJs/Styled-Components/javaScript
+                        ReactJs / Styled-Components
                       </CardFerramentas>
                       <CardFerramentas style={{ marginTop: "10px" }}>
                         Desktop
@@ -343,6 +366,8 @@ function Home() {
                     </CardFrontkUm>
                   </a>
                 </CardProjeto>
+              </SectionProjetos>
+              <SectionProjetos>
                 <CardProjeto>
                   <a
                     href="https://bankprojeto-mbtu.vercel.app/"
@@ -362,9 +387,7 @@ function Home() {
                           }}
                         />
                       </div>
-                      <CardFerramentas>
-                        Vite/React/JavaScript/Tailwild
-                      </CardFerramentas>
+                      <CardFerramentas>Vite / React / Tailwild</CardFerramentas>
                       <CardFerramentas style={{ marginTop: "10px" }}>
                         Desktop
                       </CardFerramentas>
@@ -587,7 +610,7 @@ function Home() {
                   <AiFillGithub style={{ width: "40px", height: "40px" }} />
                 </a>
                 <a
-                  href="https://www.instagram.com/igor.rafael.melo/"
+                  href="https://www.instagram.com/lrafaell_melo/"
                   target="_blank"
                   rel="noreferrer"
                 >

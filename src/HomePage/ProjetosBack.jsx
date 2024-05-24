@@ -12,6 +12,8 @@ import {
   SiYarn,
   SiStyledcomponents,
   SiFigma,
+  SiHtml5,
+  SiCss3,
 } from "react-icons/si";
 import { BsFiletypeJson } from "react-icons/bs";
 
@@ -172,6 +174,56 @@ function BackEnd(props) {
               </a>
               <a
                 href="https://cut-testing.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Web
+              </a>
+            </section>
+          </BoxDados>
+          <BoxIframe>
+            <Iframe src="https://lottie.host/embed/9bd1d96b-21a5-4a9f-95e8-40817986c68b/jKeLAyDHrW.json"></Iframe>
+          </BoxIframe>
+        </CardProject>
+      </FullScream>
+    );
+  }
+  if (props.card === "4") {
+    return (
+      <FullScream>
+        <CardProject>
+          <BoxDados>
+            <h1>Burger / Html5</h1>
+            <h3>
+              Desenvolvi a página de um portfólio de vendas para um site em que
+              estou participando, utilizando apenas HTML, CSS e JavaScript
+              puros. A página é totalmente responsiva e intuitiva para o
+              usuário, e utilizei todo o meu conhecimento em desenvolvimento
+              web, com algumas referências da internet para aprimorar o
+              resultado final.
+            </h3>
+            <h2>Tecnológicas Utilizadas</h2>
+            <div style={{ justifyContent: "space-between" }}>
+              <SiJavascript />
+              <SiHtml5 />
+              <SiCss3 />
+            </div>
+            <h2>Ferramentas </h2>
+            <div style={{ justifyContent: "space-between" }}>
+              <div></div>
+              <SiVisualstudio />
+              <div></div>
+            </div>
+            <section>
+              <a
+                href="https://github.com/DevIgorRafaelDeMelo/Projeto-Burguer"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Repositório
+              </a>
+              <a
+                href="https://projeto-burguer.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
               >
