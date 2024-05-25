@@ -9,7 +9,8 @@ import {
   AiOutlineClose,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
-import { FaCss3Alt, FaReact, FaHtml5, FaPhp } from "react-icons/fa";
+import { MdOutlineComputer, MdPhoneIphone } from "react-icons/md";
+import { FaCss3Alt, FaReact, FaHtml5, FaTabletAlt } from "react-icons/fa";
 import {
   BsFiletypeScss,
   BsBootstrapFill,
@@ -17,6 +18,7 @@ import {
   BsLinkedin,
   BsFiletypeJson,
 } from "react-icons/bs";
+import { RiComputerLine } from "react-icons/ri";
 import {
   SiJavascript,
   SiTailwindcss,
@@ -47,6 +49,7 @@ function Home() {
   const [card, setCard] = useState(0);
   return (
     <>
+      {card === 5 ? <BackEnd card="5" /> : <></>}
       {card === 4 ? <BackEnd card="4" /> : <></>}
       {card === 3 ? <BackEnd card="3" /> : <></>}
       {card === 2 ? <BackEnd card="2" /> : <></>}
@@ -267,10 +270,34 @@ function Home() {
               <LineHorizontal></LineHorizontal>
               <SectionProjetos>
                 <CardProjeto>
-                  <CardFrontkTreis
-                    onClick={() => setTimeout(() => setCard(4), 1)}
+                  <CardFrontkDois
+                    onClick={() => setTimeout(() => setCard(5), 1)}
                   >
-                    <CardDate>25/Maio/24</CardDate>
+                    <CardDate>24/Maio/24</CardDate>
+                    <CardTitle>Doctor</CardTitle>
+                    <div>
+                      <FaHtml5
+                        style={{
+                          height: "90px",
+                          width: "90px",
+                          paddingTop: "25px",
+                          paddingBottom: "25px",
+                          color: "#ff381e",
+                        }}
+                      />
+                    </div>
+                    <CardFerramentas>Html / CSS / Bootstrap</CardFerramentas>
+
+                    <CardFerramenta style={{ marginTop: "40px" }}>
+                      <MdPhoneIphone />
+                      <FaTabletAlt />
+                      <RiComputerLine />
+                    </CardFerramenta>
+                  </CardFrontkDois>
+                </CardProjeto>
+                <CardProjeto>
+                  <CardFrontkUm onClick={() => setTimeout(() => setCard(4), 1)}>
+                    <CardDate>25/Março/24</CardDate>
                     <CardTitle>Burger</CardTitle>
                     <div>
                       <FaHtml5
@@ -286,9 +313,13 @@ function Home() {
                     <CardFerramentas>Html / CSS / Bootstrap</CardFerramentas>
 
                     <CardFerramentas style={{ marginTop: "10px" }}>
-                      Responsivel
+                      <CardFerramenta style={{ marginTop: "40px" }}>
+                        <MdPhoneIphone />
+                        <FaTabletAlt />
+                        <RiComputerLine />
+                      </CardFerramenta>
                     </CardFerramentas>
-                  </CardFrontkTreis>
+                  </CardFrontkUm>
                 </CardProjeto>
                 <CardProjeto>
                   <CardFrontkTreis
@@ -310,7 +341,9 @@ function Home() {
                     <CardFerramentas>React / StyleComponets</CardFerramentas>
 
                     <CardFerramentas style={{ marginTop: "10px" }}>
-                      Mobile
+                      <CardFerramenta style={{ marginTop: "40px" }}>
+                        <MdPhoneIphone />
+                      </CardFerramenta>
                     </CardFerramentas>
                   </CardFrontkTreis>
                 </CardProjeto>
@@ -333,11 +366,15 @@ function Home() {
                       <CardFerramentas>Vite / React / Tailwind</CardFerramentas>
 
                       <CardFerramentas style={{ marginTop: "10px" }}>
-                        Desktop
+                        <CardFerramenta style={{ marginTop: "40px" }}>
+                          <RiComputerLine />
+                        </CardFerramenta>
                       </CardFerramentas>
                     </CardFrontkQuatro>
                   </a>
                 </CardProjeto>
+              </SectionProjetos>
+              <SectionProjetos>
                 <CardProjeto>
                   <a
                     href="https://yamaha-java-script-react-b9o2earlc-devigorrafaeldemelo.vercel.app/?vercelToolbarCode=dEoNrDChS8TBBvX"
@@ -361,13 +398,13 @@ function Home() {
                         ReactJs / Styled-Components
                       </CardFerramentas>
                       <CardFerramentas style={{ marginTop: "10px" }}>
-                        Desktop
+                        <CardFerramenta style={{ marginTop: "40px" }}>
+                          <RiComputerLine />
+                        </CardFerramenta>
                       </CardFerramentas>
                     </CardFrontkUm>
                   </a>
                 </CardProjeto>
-              </SectionProjetos>
-              <SectionProjetos>
                 <CardProjeto>
                   <a
                     href="https://bankprojeto-mbtu.vercel.app/"
@@ -389,7 +426,9 @@ function Home() {
                       </div>
                       <CardFerramentas>Vite / React / Tailwild</CardFerramentas>
                       <CardFerramentas style={{ marginTop: "10px" }}>
-                        Desktop
+                        <CardFerramenta style={{ marginTop: "40px" }}>
+                          <RiComputerLine />
+                        </CardFerramenta>
                       </CardFerramentas>
                     </CardFrontkDois>
                   </a>
@@ -1004,5 +1043,15 @@ const SectionIconsLinks = styled.div`
   justify-content: space-between;
   a {
     padding: 20px;
+  }
+`;
+
+const CardFerramenta = styled.div`
+  justify-content: space-between;
+  margin: auto;
+  svg {
+    font-size: 30px;
+    color: #106adf;
+    margin: 20px;
   }
 `;

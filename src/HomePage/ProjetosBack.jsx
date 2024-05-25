@@ -238,6 +238,53 @@ function BackEnd(props) {
       </FullScream>
     );
   }
+  if (props.card === "5") {
+    return (
+      <FullScream>
+        <CardProject>
+          <BoxDados>
+            <h1>Doctor / Html5</h1>
+            <h3>
+              Desenvolvi uma landing page utilizando HTML, CSS e JavaScript
+              puros. A página é responsiva e funcional, o que permite uma boa
+              experiência de navegação aos usuários.
+            </h3>
+            <h2>Tecnológicas Utilizadas</h2>
+            <div style={{ justifyContent: "space-between" }}>
+              <SiJavascript />
+              <SiHtml5 />
+              <SiCss3 />
+            </div>
+            <h2>Ferramentas </h2>
+            <div style={{ justifyContent: "space-between" }}>
+              <div></div>
+              <SiVisualstudio />
+              <div></div>
+            </div>
+            <section>
+              <a
+                href="https://github.com/DevIgorRafaelDeMelo/Projeto-Doctor"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Repositório
+              </a>
+              <a
+                href="https://projeto-doctor-one.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Web
+              </a>
+            </section>
+          </BoxDados>
+          <BoxIframe>
+            <Iframe src="https://lottie.host/embed/7822dd7b-5319-49a9-b776-38d8a1d05cb3/HPvDHH8Ahb.json"></Iframe>
+          </BoxIframe>
+        </CardProject>
+      </FullScream>
+    );
+  }
 }
 
 const FullScream = styled.div`
