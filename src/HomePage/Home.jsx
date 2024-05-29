@@ -34,7 +34,7 @@ import {
   SiNpm,
   SiEslint,
 } from "react-icons/si";
-import ImgFundo from "../img/pexels-white-noiise-8992445.jpg";
+import ImgFundo from "../img/pexels-jeshoots-234527.jpg";
 import MinhaImg from "../img/FundoDark.jpeg";
 import ImgBackum from "../img/Bilingue.jpg";
 import CardBackUmm from "../img/CardBackUm.jpeg";
@@ -80,7 +80,7 @@ function Home() {
             <IconMenu>
               <a href="https://github.com/DevIgorRafaelDeMelo" target="_Blanck">
                 <AiFillGithub
-                  style={{ height: "55px", width: "55px", color: "#38035c" }}
+                  style={{ height: "55px", width: "55px", color: "#8D0AE4" }}
                 />
               </a>
               <a
@@ -88,7 +88,7 @@ function Home() {
                 target="_Blanck"
               >
                 <AiFillLinkedin
-                  style={{ height: "55px", width: "55px", color: "#0f459d" }}
+                  style={{ height: "55px", width: "55px", color: "#367DF0" }}
                 />
               </a>
             </IconMenu>
@@ -867,7 +867,7 @@ const MainContainer = styled.div`
   perspective: 1px;
   transform-style: preserve-3d;
   height: 100vh;
-  width: 103%;
+  width: 104%;
   overflow-y: scroll;
   overflow-x: hidden;
 `;
@@ -924,7 +924,7 @@ const ItenMenu = styled.a`
   }
 `;
 const ItenMenuMain = styled(ItenMenu)`
-  background: #106adf;
+  background: #237ef7;
 `;
 const TitleHome = styled.div`
   color: white;
@@ -936,18 +936,18 @@ const TitleHome = styled.div`
   font-size: 40px;
 `;
 const Text1 = styled.div`
-  color: #f7f7f7;
+  color: #e7e7e7;
   font-size: 34px;
   font-weight: 300;
 `;
 const Text2 = styled.div`
-  color: black;
+  color: #e0e0e0;
   font-size: 55px;
   font-weight: 500;
   padding-top: 30px;
 `;
 const Text3 = styled.div`
-  color: #f8f8f8;
+  color: #65adf1;
   font-size: 24px;
   font-weight: 300;
   margin-top: 15px;
@@ -1045,7 +1045,6 @@ const SectionIconsLinks = styled.div`
     padding: 20px;
   }
 `;
-
 const CardFerramenta = styled.div`
   justify-content: space-between;
   margin: auto;

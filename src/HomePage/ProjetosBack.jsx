@@ -79,9 +79,6 @@ function BackEnd(props) {
               </a>
             </section>
           </BoxDados>
-          <BoxIframe>
-            <Iframe src="https://lottie.host/?file=b97326df-3985-4cad-baea-f3664fd9a74c/WIhC0XzNzR.json"></Iframe>
-          </BoxIframe>
         </CardProject>
       </FullScream>
     );
@@ -130,9 +127,6 @@ function BackEnd(props) {
               </a>
             </section>
           </BoxDados>
-          <BoxIframe>
-            <Iframe src="https://lottie.host/embed/7822dd7b-5319-49a9-b776-38d8a1d05cb3/HPvDHH8Ahb.json"></Iframe>
-          </BoxIframe>
         </CardProject>
       </FullScream>
     );
@@ -181,9 +175,6 @@ function BackEnd(props) {
               </a>
             </section>
           </BoxDados>
-          <BoxIframe>
-            <Iframe src="https://lottie.host/embed/9bd1d96b-21a5-4a9f-95e8-40817986c68b/jKeLAyDHrW.json"></Iframe>
-          </BoxIframe>
         </CardProject>
       </FullScream>
     );
@@ -231,9 +222,6 @@ function BackEnd(props) {
               </a>
             </section>
           </BoxDados>
-          <BoxIframe>
-            <Iframe src="https://lottie.host/embed/9bd1d96b-21a5-4a9f-95e8-40817986c68b/jKeLAyDHrW.json"></Iframe>
-          </BoxIframe>
         </CardProject>
       </FullScream>
     );
@@ -278,9 +266,6 @@ function BackEnd(props) {
               </a>
             </section>
           </BoxDados>
-          <BoxIframe>
-            <Iframe src="https://lottie.host/embed/7822dd7b-5319-49a9-b776-38d8a1d05cb3/HPvDHH8Ahb.json"></Iframe>
-          </BoxIframe>
         </CardProject>
       </FullScream>
     );
@@ -307,15 +292,15 @@ const CardProject = styled.div`
 
 const BoxDados = styled.div`
   padding: 70px;
-  width: 70%;
+  width: 100%;
   color: #ebebeb;
   text-align: center;
   div {
     font-size: 40px;
     color: #0006a6;
     margin: auto;
+    width: 20%;
     display: flex;
-    width: 30%;
     justify-content: space-between;
   }
   h1 {
@@ -350,13 +335,6 @@ const BoxDados = styled.div`
     }
   }
 `;
-const Iframe = styled.iframe`
-  border: none;
-  margin-top: 40%;
-  height: 300px;
-  width: 300px;
-`;
-
 const BoxIframe = styled.div`
   width: 30%;
 `;
