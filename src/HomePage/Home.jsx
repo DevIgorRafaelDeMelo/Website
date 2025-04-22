@@ -103,40 +103,17 @@ function Home() {
             <BoxDois>
               <TextTitleUm>Sobre</TextTitleUm>
               <TextTitleDois>
-                Sou um estudante de programação com especialização em
-                desenvolvimento Web. Tenho uma forte determinação em entrar no
-                mercado de TI e estou buscando uma oportunidade na área. Possuo
-                diversos cursos e formação técnica em análise de sistemas Web, o
-                que me permite desenvolver sistemas tanto no Back-End quanto no
-                Front-End. Neste portfólio apresento os projetos que desenvolvi
-                durante meu aprendizado, demonstrando minha habilidade e
-                capacidade de criar soluções. Estou disponível para atuar como
-                estagiário ou profissional júnior na área de desenvolvimento
-                web. Com uma determinação inabalável, estou totalmente focado em
-                aprender e aprimorar minhas habilidades de análise de sistemas.
-                Tenho certeza de que serei um ativo valioso para qualquer
-                empresa ou organização que me der a oportunidade de me tornar
-                parte de sua equipe de TI.
+                Olá, meu nome é Igor, sou estudante de Tecnologia da Informação,
+                atualmente me especializando na área de Desenvolvimento de
+                Sistemas com foco em Desenvolvimento Web. Possuo sólidos
+                conhecimentos em TechJS, Node.js e MySQL. Tenho formação técnica
+                na área e estou cursando Ensino Superior em Análise e
+                Desenvolvimento de Sistemas. Atualmente, atuo como suporte em TI
+                em uma ERP. Estou em busca de oportunidades na área de
+                desenvolvimento, e meu portfólio inclui diversos projetos que
+                desenvolvi ao longo da minha jornada de aprendizado em
+                desenvolvimento de sistemas.
               </TextTitleDois>
-              <h1>Um pouco a mais</h1>
-              <TextTitleDois>
-                Desde os meus 15 anos, trabalho, coincidindo com a mesma idade
-                em que comecei a viver sozinho. Além disso, sou ex-militar e
-                agora reservista. Atualmente, desempenho a profissão de auxiliar
-                de faturamento. Tenho sempre a busca pelo crescimento e
-                aprimoramento pessoal como meta. Resido em uma pequena cidade
-                gaúcha chamada Dois Irmãos. Um dos meus maiores talentos é o
-                desenho realista e, caso esteja interessado, meu perfil no
-                Instagram está disponível para visualização logo abaixo.
-              </TextTitleDois>
-              <h1>Confira</h1>
-              <a
-                href="https://www.instagram.com/lrafaell_melo/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <AiFillInstagram style={{ width: "40px" }} />
-              </a>
             </BoxDois>
           </Sobre>
           <ProjetosDesenvolvidos id="Projetos">
@@ -648,13 +625,7 @@ function Home() {
                 >
                   <AiFillGithub style={{ width: "40px", height: "40px" }} />
                 </a>
-                <a
-                  href="https://www.instagram.com/lrafaell_melo/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <AiFillInstagram style={{ width: "40px", height: "40px" }} />
-                </a>
+
                 <a
                   href="https://contate.me/igorrmd"
                   target="_blank"
@@ -692,7 +663,7 @@ export default Home;
 const Fecha = styled.div`
   position: fixed;
   top: 14%;
-  left: 14%;
+  left: 74%;
   width: 40px;
   height: 40px;
   background: #01b7ff;
@@ -876,7 +847,6 @@ const Parallax = styled.div`
   flex: 1 0 auto;
   position: relative;
   height: 100vh;
-  transform: translateZ(-1px) scale(2);
   z-index: -1;
 `;
 const Content = styled.div`
@@ -936,18 +906,20 @@ const TitleHome = styled.div`
   font-size: 40px;
 `;
 const Text1 = styled.div`
-  color: #e7e7e7;
+  color: #e7e7e7ff;
   font-size: 34px;
   font-weight: 300;
 `;
 const Text2 = styled.div`
-  color: #e0e0e0;
+  color: #237ef7;
   font-size: 55px;
   font-weight: 500;
   padding-top: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 `;
 const Text3 = styled.div`
-  color: #65adf1;
+  color: #e6e4e6ff;
   font-size: 24px;
   font-weight: 300;
   margin-top: 15px;
@@ -1027,7 +999,7 @@ const TextTitleUm = styled.div`
   color: #fdfdfd;
 `;
 const TextTitleDois = styled.div`
-  font-size: 1rem;
+  font-size: 1.6rem;
   padding: 50px;
   width: 70%;
   color: white;

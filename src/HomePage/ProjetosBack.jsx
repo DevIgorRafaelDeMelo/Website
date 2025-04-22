@@ -285,7 +285,7 @@ const FullScream = styled.div`
 const CardProject = styled.div`
   margin: auto;
   height: 100%;
-  width: 100%;
+  width: 70%;
   background: #0374f5;
   display: flex;
 `;
@@ -334,9 +334,6 @@ const BoxDados = styled.div`
       background: #0044ff;
     }
   }
-`;
-const BoxIframe = styled.div`
-  width: 30%;
 `;
 
 export default BackEnd;
